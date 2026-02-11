@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //6. 문제: 아래 numbers 배열에서  가장 큰 수 를 출력하시오
+        const numbers = [12, 41, 6, 18, 10];
+        
+        max = 0;
+
+        //반복문 x
+        let item = numbers[0];
+        console.log(item);
+        if(item > max){
+            max = item;
+        }
+        item = numbers[1];
+        console.log(item);
+        if(item > max){
+            max = item;
+        }
+        item = numbers[2];
+        console.log(item);
+        if(item > max){
+            max = item;
+        }
+        item = numbers[3];
+        console.log(item);
+        if(item > max){
+            max = item;
+        }
+        item = numbers[4];
+        console.log(item);
+        if(item > max){
+            max = item;
+        }
+        alert(`가장 큰 값 ${max} 입니다`);
+
+
+        //반복문 o
+        for(let i=0; i<numbers.length; i++){
+            let item = numbers[i];
+            console.log(item);
+            if(item > max){
+                max = item;
+            }
+        }
+        alert("가장 큰 값 " + max + " 입니다");
+    </script>
+</body>
+</html>

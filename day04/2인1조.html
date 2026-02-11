@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function plus (num1, num2, operator){
+      //     if(operator == "+"){
+      //         return num1 + num2;
+      //     }
+      // }
+      // function minus (num1, num2, operator){
+      //     if(operator == "-"){
+      //         return num1 - num2;
+      //     }
+      // }
+
+      // let result;
+
+      // let num1 = parseInt((prompt("첫 번째 수 입력 :")));
+      // let num2 = parseInt((prompt("두 번째 수 입력 :")));
+      // let operator = prompt("+, - 중 하나를 입력하세요");
+
+      // result = plus(num1, num2, operator);
+      // result = minus(num1, num2, operator);
+      // alert(result);
+
+      const numArr = [];
+      for(i=0; i<3; i++){
+        numArr[i] = prompt("숫자 - > 연산자 -> 숫자 순으로 입력하세요");
+      }
+      Number(nuwArr[0]); Number(nuwArr[2]);
+      nuwArr[1];
+
+
+    //   const num1 = Number(prompt("첫 번째 숫자를 입력하시오"));
+    //   const num2 = Number(prompt("두 번째 숫자를 입력하시오"));
+    //   const operator = prompt("연산자를 입력하시오");
+      function plus(num1, num2, operator) {
+        if (operator == "+") {
+          return num1 + num2;
+        }
+      }
+      function minus(num1, num2, operator) {
+        if (operator == "-") {
+          return num1 - num2;
+        }
+      }
+      function square(num1, num2, operator) {
+        if (operator == "*") {
+          const result = num1 * num2;
+          return result;
+        }
+      }
+      function divide(num1, num2, operator) {
+        if (operator == "/") {
+          const result = num1 / num2;
+          return result;
+        }
+      }
+      function modulo(num1, num2, operator) {
+        if (operator == "%") {
+          const result = num1 % num2;
+          return Math.floor(result);
+        }
+      }
+      switch (operator) {
+        case "+":
+          alert(plus(nuwArr[0], nuwArr[2], nuwArr[1]));
+          break;
+        case "-":
+          alert(minus(nuwArr[0], nuwArr[2], nuwArr[1]));
+          break;
+        case "*":
+          alert(square(nuwArr[0], nuwArr[2], nuwArr[1]));
+          break;
+        case "/":
+          alert(divide(nuwArr[0], nuwArr[2], nuwArr[1]));
+          break;
+        case "%":
+          alert(modulo(nuwArr[0], nuwArr[2], nuwArr[1]));
+          break;
+        default:
+          alert("다시 입력하세요");
+          break;
+      }
+    </script>
+  </body>
+</html>

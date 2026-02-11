@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.  홀수인지판단하는 함수 만들기  ( 수 -> 홀수이면  true, false  반환 ) -->
+    <script>
+        /*
+        기능 : 매개변수를 받아 홀수인지 판단
+        입력 : 숫자
+        반환 : true, false
+        */
+        function 홀수(n) {
+            if (n % 2 !== 0){
+                alert("홉수입니다");
+                return true;
+            }else {
+                alert("홀수가 아닙니다");
+                return false;
+            }
+        }
+        let n = parseInt(prompt("숫자를 입력해주세요"));
+        홀수(n);
+    </script>
+</body>
+</html>

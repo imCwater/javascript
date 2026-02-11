@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 3.  구구단을 출력하는 함수 만들기  ( 단  -> 해당 단을 출력하기  ) -->
+    <script>
+        /*
+        기능 : 구구단 출력
+        입력 : 단 숫자
+        반환 : x(반환값이 없다는 것을 의미) //반환이 없으면 undefined
+        */
+          function ggd(k) {
+            for(let i=1; i<=9; i++){
+                document.write(k + "x" + i + "=" + k*i + "<br>");
+            }
+      }
+      let k = prompt ("몇단?")
+      ggd(k);
+
+
+      /*
+          기능: 구구단 출력
+          입력: 단 숫자
+          반환: 해당 구구단
+        */
+        function 구구단출력(n){
+            let result  ="";
+            for(let i=1; i<=9; i++){
+                result +=  n + "x" + i + "="+  n*i + "<br>" ; 
+            }
+            return result;
+        }
+        let n = prompt("출력할 구구단을 입력하세요");
+        let result= 구구단출력(n);
+        alert(result  );
+    
+    </script>
+  </body>
+</html>

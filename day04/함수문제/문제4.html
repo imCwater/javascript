@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 4.  사각형의 넓이를 구하는 함수 만들기  (가로, 세로  -> 넓이를 반환하기  ) -->
+
+    <script>
+      /*
+      기능 : 사각형의 넓이 구하기
+      입력 : 가로, 세로
+      반환 : 사각형의 넓이값
+       */
+
+      function square(width, height) {
+        let area = width * height;
+        return area;
+      }
+      let width = parseInt(prompt("가로를 입력해주세요"));
+      let height = parseInt(prompt("세로를 입력해주세요"));
+      let result = square(width,height);
+      alert(result);
+    </script>
+  </body>
+</html>
