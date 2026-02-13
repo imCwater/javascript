@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //this를 매개변수로 전달하여 객체의 속성 바꾸기
+        function changeImage(obj){  //매개변수 필요
+            //이미지변경
+            console.log(obj);
+            //alert("adsfd");
+            
+            obj.src="https://sitem.ssgcdn.com/01/72/01/item/1000761017201_i1_332.jpg";
+
+        }
+    </script>
+</head>
+<body>
+    <img src="https://m.tlj.co.kr:8008/data/product/2025-4-8_event(5).jpg" 
+    alt="케익이미지" onclick="changeImage(this)" >
+</body>
+</html>

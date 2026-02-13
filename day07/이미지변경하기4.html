@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        function changeImage(e){  
+            //alert("adsfd");
+            console.log(e);
+
+            console.log(e.target);
+
+            e.target.src="https://mblogthumb-phinf.pstatic.net/MjAyMjAyMjdfNDUg/MDAxNjQ1OTY1MzEwNjM5.pyT_yF6wy1bOugGLi_FDPDJc45YZdn6jW3QMTCTn9_og.D7wRTQe3S7pSx4GVUfwBkVAtJScLEB6D4BLzsQucrVYg.JPEG.sugarberrys/SE-067f1560-006e-47eb-9fb0-c2e8b8d28d6d.jpg?type=w800";
+
+        }
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>이벤트객체를 사용하여 이미지 변경하기</h2>
+    <p>이벤트 객체 : 발생한 이벤트정보를 가진 객체</p>
+    <img src="https://hanbitcho.com/wp-content/uploads/elementor/thumbs/284A3301-puqc0h10p4hg3rn19jwyuc7ss2atkuc20peqkftm6c.jpg" 
+    alt="이미지" onclick="changeImage(event)">
+    
+</body>
+</html>
