@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인 + 로그인</title>
+
+    <style>
+      header {
+        height: 100px;
+        background: #dcd0b8;
+        position: relative;
+      }
+
+      nav {
+        padding: 10px;
+        background: rgb(156, 5, 75);
+      }
+
+      footer {
+        height: 100px;
+        background: blue;
+        display: flex;
+      }
+
+      .footer-item {
+        border: 1px solid red;
+        width: 33.3%;
+        padding: 10px;
+      }
+
+      .title {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+      }
+
+      /* 검색바 */
+      .search-bar {
+        width: 200px;
+        height: 40px;
+        border: 1px solid black;
+        display: flex;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .search-text {
+        width: 160px;
+        border: none;
+        outline: none;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .search-img {
+        width: 40px;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcmoFIvEnHab-ZJBVqx0QGqgx0eLfio1h_g&s);
+        background-size: cover;
+      }
+
+      /* nav */
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav ul li {
+        padding-right: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      /* 로그인 */
+      section {
+        padding: 60px 0;
+      }
+
+      .login-wrap {
+        width: 400px;
+        border: 1px solid black;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .image-wrap {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
+
+      .image-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .user-info-wrap {
+        margin-top: 30px;
+      }
+
+      .user-info-wrap input,
+      .user-info-wrap button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="title">title이미지</div>
+
+      <div class="search-bar">
+        <input type="text" class="search-text" />
+        <div class="search-img"></div>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index2.html">홈으로</a></li>
+        <li><a href="로그인.html">로그인</a></li>
+        <li><a href="회원가입.html">회원가입</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <div class="login-wrap">
+        <div class="image-wrap">
+          <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" />
+        </div>
+
+        <div class="user-info-wrap">
+          <input type="text" placeholder="아이디" />
+          <input type="password" placeholder="비밀번호" />
+          <button>로그인</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-item">Acorn</div>
+      <div class="footer-item">연락처</div>
+      <div class="footer-item">기본정보</div>
+    </footer>
+  </body>
+</html>
