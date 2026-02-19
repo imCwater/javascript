@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 100px;
+            background-color: aqua;
+
+            position: relative;
+        }
+        .search-bar{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+
+            width: 200px;
+            height: 40px;
+            border: 1px solid black;
+            display: flex;
+        }
+        .search-text{
+            width: 160px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .search-img{
+            width: 40px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcmoFIvEnHab-ZJBVqx0QGqgx0eLfio1h_g&s);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">title</div>
+        <!-- 검색바 -->
+        <div class="search-bar">
+            <input type="text" class="search-text" placeholder="검색">
+            <div class="search-img"></div>
+        </div>
+    </header>
+</body>
+</html>
