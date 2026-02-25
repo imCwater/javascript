@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .lotto-ball{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background-color: aqua;
+            text-align: center;
+            display: inline-block;
+            margin-left: 20px;
+        }
+    </style>
+
+    <script>
+        /*
+        문제) 로또공 6개 띄우기
+        1. 로또번호만들기 (6개)
+        2. 로또공 6개 만들기
+           2-1. 부모영역선택
+           2-2. 반복(6번)
+                -div태그생성하기
+                -style 주기 (style 만들고 추가하기)
+                -로또번호 넣기
+                -부모영역에 추가하기
+        */
+
+        function getLottoNumbers(){
+            const lottos = [12, 6, 45, 30, 1, 2];
+            return lottos;
+        }
+
+        function createLotto(){
+            const lottos = getLottoNumbers();
+            const result = document.getElementById("result");
+
+            //부모영역초기화
+            result.innerHTML="";
+
+            for(let i=0; i<lottos.length; i++){
+                const ball = document.createElement("div");
+                ball.innerHTML = lottos[i];
+                ball.classList.add("lotto-ball");
+                result.appendChild(ball);
+            }
+        }
+    </script>
+
+    <button onclick="createLotto()">로또 공 나오기</button>
+
+    <div id="result"></div>
+</body>
+</html>

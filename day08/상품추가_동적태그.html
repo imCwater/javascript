@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function addPd(){
+            //alert("dsdf");
+            const pdName = document.getElementById("pdName").value;
+            const pdPrice = document.getElementById("pdPrice").value;
+            //alert(pdName);
+            //alert(pdPrice);
+
+            const pdDiv = document.createElement("div");
+
+
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h2>상품 추가</h2>
+
+        <div class="input">
+            <input type="text" id="pdName" placeholder="상품명">
+            <input type="text" id="pdPrice" placeholder="가격">
+            <button onclick="addPd()">추가</button>
+        </div>
+        <div class="pdList">
+            <h3>상품 목록</h3> <hr>
+        </div>
+    </div>
+    
+
+</body>
+</html>
