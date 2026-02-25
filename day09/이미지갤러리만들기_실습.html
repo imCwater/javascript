@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .gallery-wrap {
+        text-align: center;
+        border: 3px solid rgb(74, 107, 255);
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+
+        position: relative;
+        overflow: hidden;
+      }
+      .gallery {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+
+        background-image: url(galleryimage/chikawa.webp);
+        background-position: center;
+        background-size: cover;
+      }
+      .gallery-btn {
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: rgb(150, 255, 250);
+        text-align: center;
+
+        position: absolute;
+        top: 50%;
+        /* transfrom: translateY(-50%);  세로가운데에 위치하려면 y축 기준으로 이동해야 함 */
+      }
+
+      .left {
+        left: 5px;
+      }
+      .right {
+        right: 5px;
+      }
+
+      .title {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border: 1px solid violet;
+        border-radius: 10px;
+        padding: 5px 10px;
+        background: rgb(231, 231, 231);
+        color: #222;
+      }
+    </style>
+    <script>
+      let imgNames = [
+        "galleryimage/chikawa.webp",
+        "galleryimage/hachiware.webp",
+        "galleryimage/kurimanju.webp",
+        "galleryimage/momonga.webp",
+        "galleryimage/rakko.webp",
+        "galleryimage/shisa.webp",
+        "galleryimage/usagi.webp",
+      ];
+
+      const titles = [
+        "치이카와",
+        "하치와레",
+        "쿠리만쥬",
+        "모몽가",
+        "랏코",
+        "시사",
+        "우사기",
+      ];
+
+      //객체배열로 사용가능
+      /*
+        let images=[
+            {name: "media/Penguins.png",
+            title: "펭귄"}
+            ];
+        */
+
+      let index = 1;
+      function next() {
+        //alert("dfs");
+
+        // 이미지갤러리 영역 선택하기(갤러리선택해서 )
+        const gallery = document.querySelector(".gallery");
+        console.log(gallery);
+
+        //gallery.style.backgroundImage="url("+ imgNames[index] +")"; //url(media/Penguins.png);
+        gallery.style.backgroundImage = `url(${imgNames[index]})`; //url(media/Penguins.png);
+        gallery.style.backgroundPosition = "center";
+        gallery.style.backgroundSize = "cover";
+
+        //이미지제목 선택하기(선택해서 제목 넣기)
+        const title = document.querySelector(".title");
+        title.textContent = titles[index];
+
+        index++; //index = index+1;
+        if (index >= imgNames.length) {
+          index = 0;
+        }
+
+        gallery.animate(
+          [
+            { transform: "translateX(40%) scale(0.95)", opacity: 0 }, // 아래에서 시작
+            { transform: "translateX(0) scale(1)", opacity: 1 }, // 원래위치로
+          ],
+
+          {
+            duration: 350,
+            easing: "ease-out",
+          },
+        );
+      }
+      function prev() {
+        index--; //index = index - 1;
+
+        if (index < 0) {
+          index = imgNames.length - 1;
+        }
+        const gallery = document.querySelector(".gallery");
+        gallery.style.backgroundImage = `url(${imgNames[index]})`;
+        gallery.style.backgroundPosition = "center";
+        gallery.style.backgroundSize = "cover";
+
+        const title = document.querySelector(".title");
+        title.textContent = titles[index];
+
+        gallery.animate(
+          [
+            { transform: "translateX(-40%) scale(0.95)", opacity: 0 }, // 아래에서 시작
+            { transform: "translateX(0) scale(1)", opacity: 1 }, // 원래위치로  끝
+          ],
+
+          {
+            duration: 350,
+            easing: "ease-out",
+          },
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 갤러리 영역 -->
+    <div class="gallery-wrap">
+      <!-- 이미지 설명 -->
+      <div class="title">치이카와</div>
+      <!-- 갤러리 이미지 영역 -->
+      <div class="gallery"></div>
+
+      <!-- 갤러리 버튼 -->
+      <div class="gallery-btn left" onclick="prev()">←</div>
+      <div class="gallery-btn right" onclick="next()">→</div>
+    </div>
+  </body>
+</html>
