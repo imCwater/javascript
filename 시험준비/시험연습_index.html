@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>인덱스</title>
+
+  <style>
+    /* =========================
+       header : 맨 위 (로고/검색)
+       nav    : 메뉴
+       section: 본문 내용
+       footer : 맨 아래
+       ========================= 
+    */
+
+    /* 
+    display:flex
+    justify-content:center / flex-end
+    position:absolute
+    margin:0 auto
+
+    flex = 가로정렬
+    absolute = 위치이동
+    margin auto = 가운데
+    */
+
+    /* header = 상단 영역 */
+    header {
+      height: 100px;
+      background-color: #dcd0b8;
+
+      position: relative; /* absolute 자식 위치 기준 */
+    }
+
+    /* nav = 메뉴바 */
+    nav {
+      /*height: 60px;*/
+      padding: 10px;
+      background-color: rgb(156, 5, 75);
+    }
+
+    /* section {
+      background-color: rgb(86, 180, 24);
+    } */
+
+    /* footer = 하단 영역 */
+    footer {
+      height: 100px;
+      background-color: blue;
+
+      display: flex; /* 가로 정렬 = flex */
+    }
+
+    /* =========================
+       로고 위치 잡기
+       ========================= */
+    .title {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+
+    .title img {
+      height: 70px;
+      width: auto;
+    }
+
+    /* =========================
+       검색바 (flex + absolute)
+       ========================= */
+    .search-bar {
+      width: 200px;
+      height: 40px;
+      border: 1px solid black;
+      display: flex; /* input + 아이콘 가로 정렬 */
+
+      /* 헤더를 기준으로 위치시킴 */
+      position: absolute; /* header 기준 */
+      right: 10px;
+      bottom: 10px;
+    }
+
+    .search-text {
+      width: 160px;
+      border: none;
+      outline: none;
+      padding: 10px;
+      box-sizing: border-box; /* padding 포함해서 width 계산 */
+    }
+
+    .search-img {
+      width: 40px;
+      /* border: 1px solid black; */
+      /*  background-color: red;  */
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcmoFIvEnHab-ZJBVqx0QGqgx0eLfio1h_g&s);
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* =========================
+       nav 메뉴 오른쪽 정렬
+       ========================= */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end; /* 핵심 */
+      gap: 10px;
+    }
+
+    /* nav ul li {
+      padding-right: 10px;
+    } */
+
+    a {
+      text-decoration: none;
+      color: #ccc;
+    }
+
+    /* =========================
+       section = 상품목록
+       ========================= */
+    section ul {
+      width: 910px;
+      list-style: none;
+      /* border: 1px solid red; */
+
+      display: flex; /* 가로 정렬 */
+      flex-direction: row;
+      flex-wrap: wrap; /* 줄바꿈 */
+      margin: 0 auto; /* 가운데 정렬 */
+      padding: 0;
+    }
+
+    section ul li {
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    section ul li img {
+      width: 70%;
+    }
+
+    /* footer 아이템 균등 분배 */
+    .footer-item {
+      border: 1px solid red;
+      /* width: 33.3%; */
+      flex: 1;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <img src="https://cdn-icons-png.flaticon.com/512/14/14415.png" alt="logo" />
+    </div>
+
+    <!--<div class="search-bar">검색바</div>-->
+    <!--검색바-->
+    <div class="search-bar">
+      <input type="text" class="search-text" />
+      <div class="search-img"></div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index2.html">홈으로</a></li>
+      <li><a href="로그인.html">로그인</a></li>
+      <!-- <li><a href="회원가입.html">회원가입</a></li> -->
+    </ul>
+  </nav>
+
+  <section>
+    <ul>
+      <li>
+        <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize"
+          alt="" />
+        <p>샤넬백</p>
+        <p>2000원</p>
+      </li>
+      <li>
+        <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize"
+          alt="" />
+        <p>샤넬백</p>
+        <p>2000원</p>
+      </li>
+      <li>
+        <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize"
+          alt="" />
+        <p>샤넬백</p>
+        <p>2000원</p>
+      </li>
+      <li>
+        <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize"
+          alt="" />
+        <p>샤넬백</p>
+        <p>2000원</p>
+      </li>
+      <li>
+        <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize"
+          alt="" />
+        <p>샤넬백</p>
+        <p>2000원</p>
+      </li>
+      <li>
+        <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize"
+          alt="" />
+        <p>샤넬백</p>
+        <p>2000원</p>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="footer-item">Acorn</div>
+    <div class="footer-item">연락처</div>
+    <div class="footer-item">기본정보</div>
+  </footer>
+</body>
+</html>

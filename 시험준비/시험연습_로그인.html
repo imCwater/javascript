@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 페이지</title>
+
+  <style>
+    header {
+      height: 100px;
+      background-color: #dcd0b8;
+      position: relative;
+    }
+
+    nav {
+      padding: 10px;
+      background-color: rgb(156, 5, 75);
+    }
+
+    footer {
+      height: 100px;
+      background-color: blue;
+      display: flex;
+    }
+
+    .footer-item {
+      border: 1px solid red;
+      flex: 1;
+      padding: 10px;
+    }
+
+    /* 로고 */
+    .title {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+
+    .title img {
+      height: 70px;
+    }
+
+    /* 검색바 */
+    .search-bar {
+      width: 200px;
+      height: 40px;
+      border: 1px solid black;
+      display: flex;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+
+    .search-text {
+      width: 160px;
+      border: none;
+      outline: none;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .search-img {
+      width: 40px;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcmoFIvEnHab-ZJBVqx0QGqgx0eLfio1h_g&s);
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* nav 오른쪽 */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ccc;
+    }
+
+    /* ===================== 
+     로그인 영역 (section) 
+     위아래 여백 주기
+    /* ===================== */
+
+    section {
+      padding: 80px 0;
+      /* ↑ 위 80px / 아래 60px / 좌우 0 */
+      /* 시험 포인트 : padding 상하좌우 순서 */
+    }
+
+    /* =========================
+    로그인 박스 (가운데 정렬 핵심!!)
+   ========================= */
+    .login-wrap {
+      width: 400px;
+      border: 1px solid black;
+      margin: 0 auto; /* auto = 좌우 자동 → 가운데 정렬 */
+      padding: 20px; /* 안쪽 여백 */
+      text-align: center;
+    }
+
+    /* =========================
+    프로필 이미지 박스
+   ========================= */
+    .image-wrap {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto; /* 이미지도 가운데 */
+    }
+
+    /* =========================
+    이미지 꽉 채우기 공식
+   ========================= */
+    .image-wrap img {
+      width: 100%;
+      height: 100%; /* 부모 크기 100% 채움 */
+      object-fit: cover; /* 비율 유지 + 꽉 채움 (시험 단골) */
+    }
+
+    /* =========================
+    입력칸 영역
+   ========================= */
+    .user-info-wrap {
+      margin-top: 20px;
+    }
+
+    /* =========================
+    input + button 공통 스타일
+   ========================= */
+    .user-info-wrap input,
+    .user-info-wrap button {
+      width: 100%; /* 부모 가로 꽉 채우기 */
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box; /* padding 포함해서 width 계산 */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="title">
+      <img src="https://cdn-icons-png.flaticon.com/512/14/14415.png" alt="사이트 로고" />
+    </div>
+
+    <div class="search-bar">
+      <input type="text" class="search-text" />
+      <div class="search-img"></div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index2.html">홈으로</a></li>
+      <li><a href="로그인.html">로그인</a></li>
+    </ul>
+  </nav>
+
+  <!-- section 안에 로그인 배치 -->
+  <section>
+    <div class="login-wrap">
+
+      <!-- 프로필 이미지 -->
+      <div class="image-wrap">
+        <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="user" />
+      </div>
+
+      <!-- 입력 영역 -->
+      <div class="user-info-wrap">
+        <!-- id 필수 (JS에서 찾기 위해!!) -->
+        <input type="text" id="userId" placeholder="아이디" />
+        <input type="password" id="userPw" placeholder="비밀번호" />
+        <button onclick="checkLogin()">로그인</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-item">Acorn</div>
+    <div class="footer-item">연락처</div>
+    <div class="footer-item">기본정보</div>
+  </footer>
+
+  <script>
+    /*
+    getElementById
+    .value
+    if (!값)
+    alert()
+    focus()
+    return
+
+    getElementById → value → if → alert
+    */
+
+    /* =========================
+     JS 로그인 로직
+     ========================= */
+    function checkLogin() {
+
+      /* id로 요소 가져오기 */
+      const id = document.getElementById("userId");
+      const pw = document.getElementById("userPw");
+
+      /* 값 검사 */
+      if (id.value === "") {
+        alert("아이디를 입력하세요.");
+        id.focus();  // 커서 이동
+        return;      // 함수 종료
+      }
+
+      if (pw.value === "") {
+        alert("비밀번호를 입력하세요.");
+        pw.focus();
+        return;
+      }
+
+      alert("로그인 성공!");
+    }
+  </script>
+
+</body>
+</html>

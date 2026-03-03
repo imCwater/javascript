@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            height: 100px;
+            background-color: antiquewhite;
+
+            position: relative;
+        }
+
+        /* 검색바 */
+        nav{
+            padding: 10px;
+            background-color: rgb(255, 60, 0);
+        }
+
+        /* section{
+            background-color: aquamarine;
+        } */
+
+        footer{
+            height: 100px;
+            background-color: blue;
+
+            display: flex;
+        }
+
+        /* 로고 */
+        .title{
+            position: absolute;
+            /* border: 1px solid red; */
+            top: 10px;
+            left: 20px;
+        }
+        .title img{
+            height: 70px;
+            width: auto;
+        }
+
+        /* 검색바 */
+        .search-bar{
+            width: 200px;
+            height: 40px;
+            border: 1px solid black;
+            display: flex;
+
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        .search-text{
+            width: 160px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .search-img{
+            width: 40px;
+            /* border: 1px solid black;
+            background-color: red; */
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcmoFIvEnHab-ZJBVqx0QGqgx0eLfio1h_g&s);
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* nav */
+        nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        /* section 상품목록 */
+        section ul{
+            width: 910px;
+            list-style: none;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 0;
+        }
+        section ul li{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        section ul li img{
+            width: 70%;
+        }
+
+        /* footer */
+        .footer-item{
+            border: 1px solid red;
+            flex: 1;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- 제목 -->
+        <div class="title">
+            <img src="https://cdn-icons-png.flaticon.com/512/14/14415.png" alt="">
+        </div>
+
+        <!-- 검색바 -->
+         <div class="search-bar">
+            <input type="text" class="search-text">
+            <div class="search-img"></div>
+         </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="시험연습_헤더 copy.html">홈으로</a></li>
+            <li><a href="시험연습_로그인 copy.html">로그인</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <ul>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+            <li>
+                <img src="https://image2.lotteimall.com/goods/53/37/49/3131493753_1.jpg/dims/resizemc/380x380/optimize" alt="">
+                <p>샤넬백</p>
+                <p>2000원</p>
+            </li>
+        </ul> 
+    </section>
+
+    <footer>
+        <div class="footer-item">Acorn</div>
+        <div class="footer-item">연락처</div>
+        <div class="footer-item">기본정보</div>
+    </footer>
+</body>
+</html>
